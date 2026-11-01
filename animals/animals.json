@@ -1,0 +1,22 @@
+{
+  "_help": [
+    "The animals on the start screen, in this order. Each name is a folder in animals/ (see README.md).",
+    "settings and sounds here are shared by every animal; an animal.json can override any of them.",
+    "Sound paths in this file are relative to the app folder."
+  ],
+  "animals": ["bluebird", "bear"],
+  "settings": {
+    "shuffleWords": true,
+    "hitPadding": 1.15,
+    "transitionSeconds": 5,
+    "transitionTileRows": 56
+  },
+  "sounds": {
+    "pickup": ["sounds/drop-1.mp3", "sounds/drop-2.mp3"],
+    "wrong": ["sounds/frog.mp3"],
+    "correct": [],
+    "fly": [],
+    "celebrate": [],
+    "transition": ["sounds/wind.mp3"]
+  }
+}

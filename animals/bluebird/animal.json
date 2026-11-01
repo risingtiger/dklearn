@@ -1,0 +1,152 @@
+{
+  "name": "Bluebird",
+  "sounds": {
+    "correct": ["sounds/chirp-1.mp3", "sounds/chirp-2.mp3", "sounds/chirp-3.mp3"],
+    "fly": ["sounds/flutter.mp3"],
+    "celebrate": ["sounds/song.mp3"]
+  },
+  "layers": [
+    {
+      "id": "outside",
+      "title": "The Outside",
+      "words": [
+        {
+          "word": "Eye",
+          "zones": [{"x": 476, "y": 133, "r": 34}],
+          "label": {"x": 650, "y": 70}
+        },
+        {
+          "word": "Beak",
+          "zones": [{"x": 335, "y": 152, "rx": 70, "ry": 30, "angle": 8}],
+          "label": {"x": 170, "y": 215}
+        },
+        {
+          "word": "Head",
+          "zones": [{"x": 480, "y": 150, "rx": 135, "ry": 110}],
+          "label": {"x": 300, "y": 55},
+          "points": [{"x": 420, "y": 90}]
+        },
+        {
+          "word": "Feather",
+          "zones": [{"x": 820, "y": 420, "rx": 240, "ry": 130, "angle": 30}],
+          "label": {"x": 1080, "y": 250},
+          "points": [{"x": 860, "y": 400}]
+        },
+        {
+          "word": "Tail",
+          "zones": [{"x": 1240, "y": 770, "rx": 170, "ry": 55, "angle": 33}],
+          "label": {"x": 1390, "y": 640},
+          "points": [{"x": 1270, "y": 790}]
+        },
+        {
+          "word": "Stomach",
+          "zones": [{"x": 640, "y": 540, "rx": 160, "ry": 95}],
+          "label": {"x": 290, "y": 470},
+          "points": [{"x": 590, "y": 545}]
+        },
+        {
+          "word": "Leg",
+          "zones": [{"x": 600, "y": 642, "r": 52}, {"x": 758, "y": 680, "r": 52}],
+          "label": {"x": 960, "y": 620},
+          "points": [{"x": 762, "y": 675}]
+        },
+        {
+          "word": "Toes",
+          "zones": [{"x": 520, "y": 690, "r": 75}, {"x": 690, "y": 790, "r": 75}],
+          "label": {"x": 330, "y": 830},
+          "points": [{"x": 500, "y": 700}, {"x": 660, "y": 800}]
+        }
+      ]
+    },
+    {
+      "id": "muscles",
+      "title": "The Muscles",
+      "words": [
+        {
+          "word": "muscle",
+          "zones": [
+            {"x": 560, "y": 420, "rx": 120, "ry": 150},
+            {"x": 790, "y": 500, "rx": 70, "ry": 90},
+            {"x": 770, "y": 360, "rx": 130, "ry": 70, "angle": 25}
+          ],
+          "label": {"x": 270, "y": 350},
+          "points": [{"x": 540, "y": 420}]
+        },
+        {
+          "word": "tendon",
+          "zones": [
+            {"x": 615, "y": 615, "r": 45},
+            {"x": 765, "y": 640, "r": 45},
+            {"x": 690, "y": 285, "rx": 70, "ry": 40},
+            {"x": 1110, "y": 610, "rx": 90, "ry": 35, "angle": 30}
+          ],
+          "label": {"x": 1000, "y": 730},
+          "points": [{"x": 765, "y": 640}]
+        }
+      ]
+    },
+    {
+      "id": "organs",
+      "title": "The Organs",
+      "words": [
+        {
+          "word": "Brain",
+          "zones": [{"x": 590, "y": 85, "rx": 70, "ry": 50}],
+          "label": {"x": 830, "y": 70},
+          "points": [{"x": 615, "y": 85}]
+        },
+        {
+          "word": "Throat",
+          "zones": [{"x": 545, "y": 250, "rx": 45, "ry": 95, "angle": -10}],
+          "label": {"x": 290, "y": 290},
+          "points": [{"x": 535, "y": 240}]
+        },
+        {
+          "word": "Heart",
+          "zones": [{"x": 590, "y": 360, "r": 55}],
+          "label": {"x": 280, "y": 430},
+          "points": [{"x": 575, "y": 375}]
+        },
+        {
+          "word": "Lung",
+          "zones": [
+            {"x": 670, "y": 345, "rx": 55, "ry": 50},
+            {"x": 525, "y": 365, "rx": 35, "ry": 50}
+          ],
+          "label": {"x": 990, "y": 240},
+          "points": [{"x": 690, "y": 330}]
+        },
+        {
+          "word": "Stomach",
+          "zones": [{"x": 715, "y": 450, "rx": 85, "ry": 55, "angle": 25}],
+          "label": {"x": 1010, "y": 710},
+          "points": [{"x": 725, "y": 455}]
+        }
+      ]
+    },
+    {
+      "id": "skeleton",
+      "title": "The Bones",
+      "words": [
+        {
+          "word": "Skull",
+          "zones": [{"x": 540, "y": 110, "rx": 125, "ry": 85}],
+          "label": {"x": 250, "y": 60},
+          "points": [{"x": 520, "y": 75}]
+        },
+        {
+          "word": "Ribs",
+          "zones": [{"x": 720, "y": 420, "rx": 115, "ry": 105}],
+          "label": {"x": 1090, "y": 320},
+          "points": [{"x": 745, "y": 400}]
+        },
+        {
+          "word": "Knee",
+          "zones": [{"x": 685, "y": 578, "r": 48}, {"x": 870, "y": 605, "r": 52}],
+          "label": {"x": 1070, "y": 700},
+          "points": [{"x": 685, "y": 578}, {"x": 870, "y": 605}]
+        }
+      ]
+    }
+  ]
+}
