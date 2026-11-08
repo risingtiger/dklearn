@@ -27,6 +27,9 @@ animals/
     animal.json
     outside.png
     sounds/
+  dolphin/
+    animal.json
+    PROMPTS.md            ChatGPT prompts for the dolphin's four pictures
 sounds/                   sounds shared by every animal (water drop, frog, wind)
 ```
 
@@ -70,6 +73,7 @@ sounds/                   sounds shared by every animal (water drop, frog, wind)
 4. Open the app with `?animal=<name>&debug` to place the words (see below).
 
 A layer whose picture doesn't exist yet is skipped, so you can write the words for `muscles` before the picture is ready.
+An animal whose first picture doesn't exist yet is left off the start screen.
 
 ## Words
 
@@ -96,14 +100,14 @@ Open `?animal=bear&debug` (add `&layer=1` to jump to the second layer):
 Sounds are grouped by moment. `animals/animals.json` sets the shared ones; an `animal.json` can replace any of them
 with its own (paths relative to the animal's folder). When a list has several clips, one is picked at random.
 
-| Moment | When it plays | Shared | Bluebird | Bear |
-| --- | --- | --- | --- | --- |
-| `pickup` | a word is picked up | water drop | | |
-| `wrong` | dropped on the wrong part | frog | | |
-| `correct` | dropped on the right part (and as a new picture settles) | | bluebird call | splash |
-| `fly` | the word floats to its spot | | wing flutter | |
-| `celebrate` | a layer is finished | | bluebird song | growl |
-| `transition` | the picture changes | wind in a tree | | |
+| Moment | When it plays | Shared | Bluebird | Bear | Dolphin |
+| --- | --- | --- | --- | --- | --- |
+| `pickup` | a word is picked up | water drop | | | |
+| `wrong` | dropped on the wrong part | frog | | | |
+| `correct` | dropped on the right part (and as a new picture settles) | | bluebird call | splash | splash (the bear's) |
+| `fly` | the word floats to its spot | | wing flutter | | |
+| `celebrate` | a layer is finished | | bluebird song | growl | |
+| `transition` | the picture changes | wind in a tree | | | |
 
 ```json
 "sounds": {

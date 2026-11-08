@@ -510,12 +510,14 @@ async function main() {
     return fail(`Could not load animals/animals.json (${err.message}).`);
   }
 
-  // Names and thumbnails for the start screen; an animal whose animal.json is missing is left out.
+  // Names and thumbnails for the start screen; an animal whose animal.json or first picture is missing is left out.
   const animals = await Promise.all(
     state.index.animals.map(async (id) => {
       try {
         const def = await fetchJSON(`${animalDir(id)}animal.json`);
-        return { id, name: def.name ?? id, thumb: layerImage(animalDir(id), def.layers[0]) };
+        const thumb = layerImage(animalDir(id), def.layers[0]);
+        if (!(await fetch(thumb, { method: 'HEAD' })).ok) throw new Error(`${thumb} is missing`);
+        return { id, name: def.name ?? id, thumb };
       } catch (err) {
         console.warn(`Skipping animal "${id}"`, err);
         return null;

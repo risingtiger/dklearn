@@ -4,7 +4,7 @@
     "settings and sounds here are shared by every animal; an animal.json can override any of them.",
     "Sound paths in this file are relative to the app folder."
   ],
-  "animals": ["bluebird", "bear"],
+  "animals": ["bluebird", "bear", "dolphin"],
   "settings": {
     "shuffleWords": true,
     "hitPadding": 1.15,

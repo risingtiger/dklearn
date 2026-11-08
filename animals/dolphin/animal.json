@@ -1,0 +1,166 @@
+{
+  "name": "Dolphin",
+  "sounds": {
+    "correct": ["../bear/sounds/splash.mp3"],
+    "fly": [],
+    "celebrate": []
+  },
+  "layers": [
+    {
+      "id": "outside",
+      "title": "The Outside",
+      "words": [
+        {
+          "word": "Eye",
+          "zones": [{"x": 482, "y": 251, "r": 27}],
+          "label": {"x": 200, "y": 90}
+        },
+        {
+          "word": "Snout",
+          "zones": [{"x": 276, "y": 263, "rx": 76, "ry": 25}],
+          "label": {"x": 120, "y": 380}
+        },
+        {
+          "word": "Mouth",
+          "zones": [{"x": 365, "y": 266, "rx": 76, "ry": 15, "angle": -3}],
+          "label": {"x": 170, "y": 500}
+        },
+        {
+          "word": "Blowhole",
+          "zones": [{"x": 574, "y": 150, "rx": 30, "ry": 15, "angle": 10}],
+          "label": {"x": 560, "y": 60}
+        },
+        {
+          "word": "Head",
+          "zones": [{"x": 436, "y": 235, "rx": 140, "ry": 85, "angle": 9}],
+          "label": {"x": 330, "y": 640},
+          "points": [{"x": 452, "y": 310}]
+        },
+        {
+          "word": "Fin",
+          "zones": [{"x": 890, "y": 230, "rx": 55, "ry": 30, "angle": -20}],
+          "label": {"x": 1000, "y": 90}
+        },
+        {
+          "word": "Flipper",
+          "zones": [{"x": 665, "y": 463, "rx": 105, "ry": 41, "angle": 46}],
+          "label": {"x": 380, "y": 760}
+        },
+        {
+          "word": "Skin",
+          "zones": [{"x": 831, "y": 366, "rx": 212, "ry": 93, "angle": 28}],
+          "label": {"x": 1250, "y": 300},
+          "points": [{"x": 887, "y": 377}]
+        },
+        {
+          "word": "Tail",
+          "zones": [
+            {"x": 1149, "y": 766, "rx": 81, "ry": 28, "angle": -37},
+            {"x": 1290, "y": 751, "rx": 111, "ry": 29, "angle": 20}
+          ],
+          "label": {"x": 1390, "y": 520},
+          "points": [{"x": 1258, "y": 741}]
+        }
+      ]
+    },
+    {
+      "id": "muscles",
+      "title": "The Muscles",
+      "words": [
+        {
+          "word": "muscle",
+          "zones": [
+            {"x": 605, "y": 266, "rx": 90, "ry": 49, "angle": 28},
+            {"x": 841, "y": 382, "rx": 155, "ry": 76, "angle": 28},
+            {"x": 1090, "y": 538, "rx": 116, "ry": 39, "angle": 54}
+          ],
+          "label": {"x": 1200, "y": 220},
+          "points": [{"x": 843, "y": 375}]
+        },
+        {
+          "word": "tendon",
+          "zones": [
+            {"x": 1174, "y": 689, "rx": 53, "ry": 24, "angle": 58},
+            {"x": 608, "y": 375, "rx": 57, "ry": 20, "angle": 24}
+          ],
+          "label": {"x": 1390, "y": 520},
+          "points": [{"x": 1174, "y": 689}]
+        }
+      ]
+    },
+    {
+      "id": "organs",
+      "title": "The Organs",
+      "words": [
+        {
+          "word": "Brain",
+          "zones": [{"x": 505, "y": 201, "rx": 68, "ry": 40, "angle": 12}],
+          "label": {"x": 330, "y": 70},
+          "points": [{"x": 505, "y": 197}]
+        },
+        {
+          "word": "Throat",
+          "zones": [{"x": 610, "y": 245, "rx": 86, "ry": 17, "angle": 71}],
+          "label": {"x": 680, "y": 55},
+          "points": [{"x": 611, "y": 250}]
+        },
+        {
+          "word": "Heart",
+          "zones": [{"x": 678, "y": 386, "rx": 51, "ry": 39, "angle": 49}],
+          "label": {"x": 260, "y": 620},
+          "points": [{"x": 682, "y": 390}]
+        },
+        {
+          "word": "Lung",
+          "zones": [
+            {"x": 582, "y": 320, "rx": 35, "ry": 59},
+            {"x": 719, "y": 335, "rx": 101, "ry": 38, "angle": 52}
+          ],
+          "label": {"x": 1000, "y": 90},
+          "points": [{"x": 720, "y": 330}]
+        },
+        {
+          "word": "Stomach",
+          "zones": [
+            {"x": 926, "y": 399, "rx": 43, "ry": 20, "angle": -65},
+            {"x": 891, "y": 426, "rx": 44, "ry": 19}
+          ],
+          "label": {"x": 1250, "y": 330},
+          "points": [{"x": 910, "y": 421}]
+        }
+      ]
+    },
+    {
+      "id": "skeleton",
+      "title": "The Bones",
+      "words": [
+        {
+          "word": "Skull",
+          "zones": [
+            {"x": 328, "y": 263, "rx": 125, "ry": 36, "angle": -4},
+            {"x": 457, "y": 232, "rx": 74, "ry": 69}
+          ],
+          "label": {"x": 180, "y": 80},
+          "points": [{"x": 450, "y": 196}]
+        },
+        {
+          "word": "Ribs",
+          "zones": [{"x": 771, "y": 380, "rx": 147, "ry": 87, "angle": 25}],
+          "label": {"x": 260, "y": 600},
+          "points": [{"x": 757, "y": 440}]
+        },
+        {
+          "word": "Spine",
+          "zones": [
+            {"x": 655, "y": 243, "rx": 119, "ry": 29, "angle": 13},
+            {"x": 854, "y": 314, "rx": 119, "ry": 28, "angle": 31},
+            {"x": 1023, "y": 451, "rx": 124, "ry": 31, "angle": 49},
+            {"x": 1161, "y": 647, "rx": 128, "ry": 23, "angle": 62}
+          ],
+          "label": {"x": 1250, "y": 250},
+          "points": [{"x": 986, "y": 415}]
+        }
+      ]
+    }
+  ]
+}
