@@ -8,6 +8,7 @@
   "settings": {
     "shuffleWords": true,
     "hitPadding": 1.15,
+    "dropReach": 70,
     "transitionSeconds": 5,
     "transitionTileRows": 56
   },

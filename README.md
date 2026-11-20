@@ -125,6 +125,7 @@ In `animals/animals.json` (or an `animal.json`, to change one animal only):
 | Setting | Meaning |
 | --- | --- |
 | `shuffleWords` | mix up the word order each time |
-| `hitPadding` | how forgiving drops are (1 = exact zones, 1.3 = generous) |
+| `hitPadding` | makes every zone bigger (1 = exact zones, 1.3 = 30% bigger) |
+| `dropReach` | how close (in screen pixels, about a finger's width) a drop must land to the right part to count. A drop that is clearly on a different part still counts as wrong |
 | `transitionSeconds` | how long the picture-to-picture transition lasts |
 | `transitionTileRows` | how many rows of orbs the picture breaks into |

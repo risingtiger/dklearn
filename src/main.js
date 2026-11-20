@@ -65,14 +65,42 @@ const insideImage = (sx, sy) => {
   return sx >= r.x && sx <= r.x + r.w && sy >= r.y && sy <= r.y + r.h;
 };
 
-function hitZone(zone, p, pad) {
+// How far point p (picture pixels) is outside a zone, in picture pixels; 0 when inside.
+function zoneDistance(zone, p, pad) {
   const rx = (zone.rx ?? zone.r) * pad;
   const ry = (zone.ry ?? zone.r) * pad;
   const a = -((zone.angle || 0) * Math.PI) / 180;
   const dx = p.x - zone.x, dy = p.y - zone.y;
   const lx = dx * Math.cos(a) - dy * Math.sin(a);
   const ly = dx * Math.sin(a) + dy * Math.cos(a);
-  return (lx / rx) ** 2 + (ly / ry) ** 2 <= 1;
+  const k = Math.hypot(lx / rx, ly / ry);
+  return k <= 1 ? 0 : Math.hypot(lx, ly) * (1 - 1 / k);
+}
+
+// Distance (screen pixels) from a screen point to the nearest of some zones.
+function zonesDistance(zones, s, pad) {
+  const p = toImage(s.x, s.y);
+  const toScreenPx = state.rect.w / imgSize().w;
+  return Math.min(Infinity, ...zones.map((z) => zoneDistance(z, p, pad))) * toScreenPx;
+}
+
+// A drop counts when it lands within `dropReach` screen pixels of the right part,
+// unless it is clearly on a different part (the right part is much farther away than another one).
+// A bigger part that the right part sits inside (the Head around the Eye) doesn't count as a different part.
+function isCorrectDrop(word, s) {
+  const pad = state.settings.hitPadding ?? 1.15;
+  const reach = state.settings.dropReach ?? 70;
+  const zones = word.def.zones;
+  const target = zonesDistance(zones, s, pad);
+  if (target > reach) return false;
+  const surrounds = (z) => zones.some((t) => zoneDistance(z, t, 1) === 0);
+  const nearestOther = Math.min(
+    Infinity,
+    ...layer().words
+      .filter((def) => def !== word.def)
+      .map((def) => zonesDistance(def.zones.filter((z) => !surrounds(z)), s, pad)),
+  );
+  return target <= nearestOther + reach / 2;
 }
 
 const linePoints = (def) => def.points ?? def.zones.map(({ x, y }) => ({ x, y }));
@@ -145,9 +173,9 @@ function endDrag(e) {
   const { word } = d;
   const ghostCenter = { x: d.x - d.grabX + d.w / 2, y: d.y - d.grabY + d.h / 2 };
 
-  const pad = state.settings.hitPadding ?? 1.15;
-  const p = toImage(d.x, d.y);
-  const correct = e.type === 'pointerup' && word.def.zones.some((z) => hitZone(z, p, pad));
+  // Children aim with the finger or with the word itself, so either one landing near the part counts.
+  const correct =
+    e.type === 'pointerup' && (isCorrectDrop(word, { x: d.x, y: d.y }) || isCorrectDrop(word, ghostCenter));
 
   if (correct) {
     placeWord(word, ghostCenter);
